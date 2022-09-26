@@ -1,8 +1,8 @@
 import pytest
-
-@pytest.fixture(params=[1,2,3])
-def data(request):
-    return request.param
-
-def test_data(data):
-    assert data!=4
+from pytest_testrail.plugin import pytestrail
+@pytestrail.case('C2')
+def test_sub():
+    assert True
+@pytestrail.case('C3')
+def test_sub_02():
+    assert False
